@@ -8,7 +8,10 @@
           priority="100">
 
 <!-- Copyright 2012 by Jeroen Doggen (jeroendoggen@gmail.com)
-     Released under the LGPL -->
+     Released under the GPL 
+	 Based on "Kate fixed C++ highlighting" by Alex Turbov aka 'zaufi'
+	 https://github.com/zaufi/kate-stuff
+	 -->
 
 	<highlighting>
 		<list name="arduino">   <!-- dark yellow: 'KEYWORD2'  -->
