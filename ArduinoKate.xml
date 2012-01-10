@@ -89,7 +89,7 @@
 			<item> extern </item>
 		</list>
 		
-		<list name="arduino_B">   <!-- dark yellow bold: 'KEYWORD3'  -->
+		<list name="arduino_libs">   <!-- dark green: 'KEYWORD3'  -->
 			<item> Serial </item>
 			<item> Serial1 </item>
 			<item> Serial2 </item>
@@ -104,7 +104,7 @@
 			<item> accelero </item>
 		</list>
 		
-		<list name="arduino_I">   <!-- dark yellow italic -->
+		<list name="arduino_user">   <!-- lighter green -->
 			<item> DistanceGP2Y0A21YK </item>
 			<item> DistanceSRF04 </item>
 			<item> AcceleroMMA7361 </item>
@@ -117,7 +117,7 @@
 			<item> loop </item>
 		</list>
 		
-		<list name="arduino-symbol">   <!-- dark blue TODO is wrong!!! -->
+		<list name="arduino-symbol">   <!-- dark blue -->
 			<item> HIGH </item>
 			<item> LOW </item>
 			<item> OUTPUT </item>
@@ -165,8 +165,8 @@
 				
 				
 				<keyword attribute="Keyword" context="#stay" String="keywords" />
-				<keyword attribute="Arduino_B" context="#stay" String="arduino_B" />
-				<keyword attribute="Arduino_I" context="#stay" String="arduino_I" />
+				<keyword attribute="Arduino_libs" context="#stay" String="arduino_libs" />
+				<keyword attribute="Arduino_user" context="#stay" String="arduino_user" />
 				<keyword attribute="Arduino" context="#stay" String="arduino" />
 				<keyword attribute="Arduino-symbol" context="#stay" String="arduino-symbol" />
 				
@@ -445,8 +445,8 @@
 		<itemDatas>
 			<itemData name="Arduino"			defStyleNum="dsDecVal" spellChecking="false" />
 			<itemData name="Arduino-symbol"		defStyleNum="dsDecVal" color="#0010C4" spellChecking="false" />
-			<itemData name="Arduino_B"			defStyleNum="dsDecVal" spellChecking="false" bold="1" />
-			<itemData name="Arduino_I"			defStyleNum="dsDecVal" color="#23a45b" spellChecking="false" />
+			<itemData name="Arduino_libs"			defStyleNum="dsDecVal" spellChecking="false" bold="1" />
+			<itemData name="Arduino_user"			defStyleNum="dsDecVal" color="#23a45b" spellChecking="false" />
 			<itemData name="UserLibs"			defStyleNum="dsNormal" color="#23a45b" selColor="#23a45b" bold="0" italic="0" spellChecking="false" />
 			<itemData name="ArduinoLibs"		defStyleNum="dsNormal" color="#23a30b" selColor="#23a30b" bold="0" italic="0" spellChecking="false" />
 			
