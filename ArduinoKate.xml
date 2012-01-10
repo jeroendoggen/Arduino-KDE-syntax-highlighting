@@ -7,8 +7,8 @@
           extensions="*.ino;*.pde"
           priority="100">
 
-<!-- (c) 2012 by Jeroen Doggen (jeroendoggen@gmail.com)
-    Released under the LGPL -->
+<!-- Copyright 2012 by Jeroen Doggen (jeroendoggen@gmail.com)
+     Released under the LGPL -->
 
 	<highlighting>
 		<list name="arduino">   <!-- dark yellow: 'KEYWORD2'  -->
@@ -54,7 +54,9 @@
 			<item> parseFloat </item>
 			<item> readBytes </item>
 			<item> readBytesUntil </item>
+			</list>
 			
+		<list name="types">   <!-- dark yellow: 'KEYWORD2'  -->
 			<item> bool </item>
 			<item> char </item>
 			<item> char16_t </item>
@@ -77,12 +79,34 @@
 			<item> uint64_t </item>
 			<item> wchar_t </item>
 		</list>
+			
+		<list name="modifiers">   <!-- color  -->
+			<item> const </item>
+			<item> volatile </item>
+			<item> extern </item>
+		</list>
 		
 		<list name="arduino_B">   <!-- dark yellow bold: 'KEYWORD3'  -->
 			<item> Serial </item>
 			<item> Serial1 </item>
 			<item> Serial2 </item>
 			<item> Serial3 </item>
+			<item> Wire </item>
+			<item> Firmata </item>
+			<item> Ethernet </item>
+			<item> lcd </item>
+			<item> SPI </item>
+			<item> Sleep </item>
+			<item> dice </item>
+			<item> accelero </item>
+		</list>
+		
+		<list name="arduino_I">   <!-- dark yellow italic -->
+			<item> DistanceGP2Y0A21YK </item>
+			<item> DistanceSRF04 </item>
+			<item> AcceleroMMA7361 </item>
+			<item> WatchDogSleep </item>
+			<item> AcceleroDice </item>
 		</list>
 		
 		<list name="keywords">   <!-- bold black 'also KEYWORD3'  -->
@@ -90,7 +114,7 @@
 			<item> loop </item>
 		</list>
 		
-		<list name="types">   <!-- dark blue  -->
+		<list name="arduino-symbol">   <!-- dark blue TODO is wrong!!! -->
 			<item> HIGH </item>
 			<item> LOW </item>
 			<item> OUTPUT </item>
@@ -123,12 +147,25 @@
 			</context>
 			
 			<context attribute="Normal Text" lineEndContext="#stay" name="Main">
-				<StringDetect attribute="JDLIBS" context="JDLIBS" String="DistanceGP2Y0A21YK" />
-				<StringDetect attribute="JDLIBS" context="JDLIBS" String="DistanceSRF04" />
-				<StringDetect attribute="JDLIBS" context="JDLIBS" String="AcceleroMMA7361" />
+				<StringDetect attribute="UserLibs" context="UserLibs" String="DistanceGP2Y0A21YKxx" />
+				<StringDetect attribute="UserLibs" context="UserLibs" String="DistanceSRF04xx" />
+				<StringDetect attribute="UserLibs" context="UserLibs" String="AcceleroMMA7361xx" />
+				<StringDetect attribute="UserLibs" context="UserLibs" String="WatchDogSleepxx" />
+				<StringDetect attribute="UserLibs" context="UserLibs" String="AcceleroDicexx" />
+				
+				<StringDetect attribute="ArduinoLibs" context="ArduinoLibs" String="ChipTemp" />
+				<StringDetect attribute="ArduinoLibs" context="ArduinoLibs" String="EEPROMClass" />
+				<StringDetect attribute="ArduinoLibs" context="ArduinoLibs" String="EthernetServer" />
+				<StringDetect attribute="ArduinoLibs" context="ArduinoLibs" String="IPAddress" />
+				<StringDetect attribute="ArduinoLibs" context="ArduinoLibs" String="ChipTemp" />
+				<StringDetect attribute="ArduinoLibs" context="ArduinoLibs" String="ChipTemp" />
+				
+				
 				<keyword attribute="Keyword" context="#stay" String="keywords" />
 				<keyword attribute="Arduino_B" context="#stay" String="arduino_B" />
+				<keyword attribute="Arduino_I" context="#stay" String="arduino_I" />
 				<keyword attribute="Arduino" context="#stay" String="arduino" />
+				<keyword attribute="Arduino-symbol" context="#stay" String="arduino-symbol" />
 				
 				<StringDetect attribute="GNU Extensions" context="AttrArgs" String="__attribute__" />
 				<StringDetect attribute="GNU Extensions" context="AttrArgs" String="__declspec" />
@@ -278,7 +315,11 @@
 				<IncludeRules context="DetectNSEnd" />
 			</context>
 			
-			<context attribute="JDLIBS" lineEndContext="#pop" name="JDLIBS">
+			<context attribute="UserLibs" lineEndContext="#pop" name="UserLibs">
+				<IncludeRules context="DetectNSEnd" />
+			</context>
+			
+			<context attribute="ArduinoLibs" lineEndContext="#pop" name="ArduinoLibs">
 				<IncludeRules context="DetectNSEnd" />
 			</context>
 			
@@ -400,13 +441,16 @@
 		
 		<itemDatas>
 			<itemData name="Arduino"			defStyleNum="dsDecVal" spellChecking="false" />
+			<itemData name="Arduino-symbol"		defStyleNum="dsDecVal" color="#0010C4" spellChecking="false" />
 			<itemData name="Arduino_B"			defStyleNum="dsDecVal" spellChecking="false" bold="1" />
-			<itemData name="JDLIBS"				defStyleNum="dsNormal" color="#23a45b" selColor="#23a45b" bold="0" italic="0" spellChecking="false" />
+			<itemData name="Arduino_I"			defStyleNum="dsDecVal" color="#23a45b" spellChecking="false" />
+			<itemData name="UserLibs"			defStyleNum="dsNormal" color="#23a45b" selColor="#23a45b" bold="0" italic="0" spellChecking="false" />
+			<itemData name="ArduinoLibs"		defStyleNum="dsNormal" color="#23a30b" selColor="#23a30b" bold="0" italic="0" spellChecking="false" />
 			
 			<itemData name="Normal Text"       defStyleNum="dsNormal" spellChecking="false" />
 			<itemData name="Keyword"           defStyleNum="dsKeyword" spellChecking="false" />
-			<itemData name="Data Type"         defStyleNum="dsDataType" spellChecking="false" />
-			<itemData name="Type Modifiers"    defStyleNum="dsDataType" spellChecking="false" />
+			<itemData name="Data Type"         defStyleNum="dsDataType" color="#A6A003" selColor="#A6A003" spellChecking="false" />
+			<itemData name="Type Modifiers"    defStyleNum="dsDataType" color="#8D9C08" selColor="#8D9C08" spellChecking="false" />
 			
 			<itemData name="Octal"             defStyleNum="dsBaseN" spellChecking="false" />
 			<itemData name="Hex"               defStyleNum="dsBaseN" spellChecking="false" />
@@ -416,22 +460,8 @@
 			<itemData name="String Char"       defStyleNum="dsChar" />
 			<itemData name="Comment"           defStyleNum="dsComment" spellChecking="false" />
 			<itemData name="Symbol"            defStyleNum="dsNormal" spellChecking="false" />
-			<itemData name="Separator Symbol"  defStyleNum="dsNormal" spellChecking="false" />
-			<itemData name="Data Members (m_*)" defStyleNum="dsNormal" spellChecking="false" />
-			<itemData name="Globals (g_*)"     defStyleNum="dsNormal" spellChecking="false" />
-			<itemData name="Statics (s_*)"     defStyleNum="dsNormal" spellChecking="false" />
-			<itemData name="Types (*_t/*_type)" defStyleNum="dsNormal" spellChecking="false" />
-			<itemData name="CONSTS/MACROS"     defStyleNum="dsNormal" spellChecking="false" />
 			<itemData name="Preprocessor"      defStyleNum="dsOthers" spellChecking="false" />
 			<itemData name="Prep. Lib"         defStyleNum="dsOthers" spellChecking="false" />
-			<itemData name="Standard Macros"   defStyleNum="dsOthers" spellChecking="false" />
-			<itemData name="GNU Macros"        defStyleNum="dsChar" spellChecking="false" />
-			<itemData name="GNU Extensions"    defStyleNum="dsKeyword" color="#0095ff" selColor="#0095ff" bold="0" italic="1" spellChecking="false" />
-			<itemData name="QT/KDE Extensions" defStyleNum="dsKeyword" color="#0095ff" selColor="#0095ff" bold="0" italic="1" spellChecking="false" />
-			<itemData name="Standard Classes"  defStyleNum="dsNormal" color="#59ff00" selColor="#59ff00" bold="0" italic="0" spellChecking="false" />
-			<itemData name="Internals"         defStyleNum="dsNormal" color="#808080" selColor="#808080" bold="0" italic="0" spellChecking="false" />
-			<itemData name="Region Marker"     defStyleNum="dsRegionMarker" spellChecking="false" />
-			<itemData name="Error"             defStyleNum="dsError" spellChecking="false" />
 		</itemDatas>
 	</highlighting>
 	<general>
