@@ -57,6 +57,16 @@
 			<item> parseFloat </item>
 			<item> readBytes </item>
 			<item> readBytesUntil </item>
+			
+			<item> setFilter </item>		<!-- user lib methods'  -->
+			<item> setOrder </item>
+			<item> getDistanceRaw </item>
+			<item> getDistanceVolt </item>
+			<item> getDistanceCentimeter </item>
+			<item> isCloser </item>
+			<item> isFarther </item>
+			<item> setAveraging </item>
+			<item> setARefVoltage </item>
 			</list>
 			
 		<list name="types">   <!-- dark yellow: 'KEYWORD2'  -->
@@ -89,7 +99,7 @@
 			<item> extern </item>
 		</list>
 		
-		<list name="arduino_libs">   <!-- dark green: 'KEYWORD3'  -->
+		<list name="arduino_library_objects">   <!-- dark green: 'KEYWORD3'  -->
 			<item> Serial </item>
 			<item> Serial1 </item>
 			<item> Serial2 </item>
@@ -102,14 +112,16 @@
 			<item> Sleep </item>
 			<item> dice </item>
 			<item> accelero </item>
+			<item> Filter </item>
 		</list>
 		
-		<list name="arduino_user">   <!-- lighter green -->
+		<list name="arduino_user_classes">   <!-- lighter green -->
 			<item> DistanceGP2Y0A21YK </item>
 			<item> DistanceSRF04 </item>
 			<item> AcceleroMMA7361 </item>
 			<item> WatchDogSleep </item>
 			<item> AcceleroDice </item>
+			<item> SignalFilter </item>			
 		</list>
 		
 		<list name="keywords">   <!-- bold black 'also KEYWORD3'  -->
@@ -165,8 +177,8 @@
 				
 				
 				<keyword attribute="Keyword" context="#stay" String="keywords" />
-				<keyword attribute="Arduino_libs" context="#stay" String="arduino_libs" />
-				<keyword attribute="Arduino_user" context="#stay" String="arduino_user" />
+				<keyword attribute="Arduino_libs" context="#stay" String="arduino_library_objects" />
+				<keyword attribute="Arduino_user" context="#stay" String="arduino_user_classes" />
 				<keyword attribute="Arduino" context="#stay" String="arduino" />
 				<keyword attribute="Arduino-symbol" context="#stay" String="arduino-symbol" />
 				
