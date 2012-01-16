@@ -113,6 +113,7 @@
 			<item> dice </item>
 			<item> accelero </item>
 			<item> Filter </item>
+			<item> Dist </item>			
 		</list>
 		
 		<list name="arduino_user_classes">   <!-- lighter green -->
