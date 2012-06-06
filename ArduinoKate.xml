@@ -67,6 +67,20 @@
 			<item> isFarther </item>
 			<item> setAveraging </item>
 			<item> setARefVoltage </item>
+			<item> setPacketType </item>
+			<item> setNodeID </item>
+			<item> setSensorID </item>
+			<item> sendPacket </item>
+			<item> addUserMethodsHere </item>
+			<item> addUserMethodsHere </item>
+			<item> addUserMethodsHere </item>
+			<item> addUserMethodsHere </item>
+			<item> addUserMethodsHere </item>
+			<item> addUserMethodsHere </item>
+			<item> addUserMethodsHere </item>
+			<item> addUserMethodsHere </item>
+			<item> addUserMethodsHere </item>
+			
 			</list>
 			
 		<list name="types">   <!-- dark yellow: 'KEYWORD2'  -->
@@ -113,7 +127,18 @@
 			<item> dice </item>
 			<item> accelero </item>
 			<item> Filter </item>
-			<item> Dist </item>			
+			<item> Dist </item>	
+			<item> Servo </item>	
+			<item> Packet </item>	
+			<item> addUserLibraryObjectsHere </item>	
+			<item> addUserLibraryObjectsHere </item>
+			<item> addUserLibraryObjectsHere </item>
+			<item> addUserLibraryObjectsHere </item>
+			<item> addUserLibraryObjectsHere </item>
+			<item> addUserLibraryObjectsHere </item>
+			<item> addUserLibraryObjectsHere </item>
+			<item> addUserLibraryObjectsHere </item>
+			<item> addUserLibraryObjectsHere </item>
 		</list>
 		
 		<list name="arduino_user_classes">   <!-- lighter green -->
@@ -122,7 +147,22 @@
 			<item> AcceleroMMA7361 </item>
 			<item> WatchDogSleep </item>
 			<item> AcceleroDice </item>
-			<item> SignalFilter </item>			
+			<item> ContinuousRotationServo </item>
+			<item> SignalFilter </item>
+			<item> SerialPacket </item>
+			<item> SerialPacketDebug </item>
+			<item> addUserClassesHere </item>
+			<item> addUserClassesHere </item>
+			<item> addUserClassesHere </item>
+			<item> addUserClassesHere </item>
+			<item> addUserClassesHere </item>
+			<item> addUserClassesHere </item>
+			<item> addUserClassesHere </item>
+			<item> addUserClassesHere </item>
+			<item> addUserClassesHere </item>
+			<item> addUserClassesHere </item>
+			<item> addUserClassesHere </item>
+			<item> addUserClassesHere </item>
 		</list>
 		
 		<list name="keywords">   <!-- bold black 'also KEYWORD3'  -->
