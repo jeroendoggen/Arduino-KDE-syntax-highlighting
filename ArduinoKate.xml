@@ -71,8 +71,8 @@
 			<item> setNodeID </item>
 			<item> setSensorID </item>
 			<item> sendPacket </item>
-			<item> addUserMethodsHere </item>
-			<item> addUserMethodsHere </item>
+			<item> getState </item>
+			<item> setState </item>
 			<item> addUserMethodsHere </item>
 			<item> addUserMethodsHere </item>
 			<item> addUserMethodsHere </item>
@@ -130,11 +130,11 @@
 			<item> Dist </item>	
 			<item> Servo </item>	
 			<item> Packet </item>	
-			<item> addUserLibraryObjectsHere </item>	
-			<item> addUserLibraryObjectsHere </item>
-			<item> addUserLibraryObjectsHere </item>
-			<item> addUserLibraryObjectsHere </item>
-			<item> addUserLibraryObjectsHere </item>
+			<item> Module </item>	
+			<item> DistIR1 </item>
+			<item> DistIR2 </item>
+			<item> DistAcc1 </item>
+			<item> DistAcc2 </item>
 			<item> addUserLibraryObjectsHere </item>
 			<item> addUserLibraryObjectsHere </item>
 			<item> addUserLibraryObjectsHere </item>
@@ -151,8 +151,8 @@
 			<item> SignalFilter </item>
 			<item> SerialPacket </item>
 			<item> SerialPacketDebug </item>
-			<item> addUserClassesHere </item>
-			<item> addUserClassesHere </item>
+			<item> LT_Module </item>
+			<item> DistanceGP2Y0A41SK </item>
 			<item> addUserClassesHere </item>
 			<item> addUserClassesHere </item>
 			<item> addUserClassesHere </item>
